@@ -11,7 +11,7 @@ class InitiateResponse {
   final int? status;
   final bool? success;
   final String? message;
-  final Data? data;
+  final Detail? data;
 
   factory InitiateResponse.fromJson(String str) => InitiateResponse.fromMap(json.decode(str));
 
@@ -20,7 +20,7 @@ class InitiateResponse {
       status: json["status"],
       success: json["success"],
       message: json["message"],
-      data: json["data"] == null ? null : Data.fromJson(json["data"]),
+      data: json["data"] == null ? null : Detail.fromJson(json["data"]),
     );
   }
 
@@ -33,8 +33,8 @@ class InitiateResponse {
 
 }
 
-class Data {
-  Data({
+class Detail {
+  Detail({
      this.merchantInfo,
      this.currency,
      this.recurring,
@@ -58,8 +58,8 @@ class Data {
   final String? checkoutUrl;
   final bool? allowRecurring;
 
-  factory Data.fromJson(Map<String, dynamic> json){
-    return Data(
+  factory Detail.fromJson(Map<String, dynamic> json){
+    return Detail(
       merchantInfo: json["merchant_info"] == null ? null : MerchantInfo.fromJson(json["merchant_info"]),
       currency: json["currency"],
       recurring: json["recurring"] == null ? null : Recurring.fromJson(json["recurring"]),
