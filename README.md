@@ -62,11 +62,12 @@ context,
 To verify if a transaction is successful or not we use this code snippet below
 ```dart
 //Verify transaction 
-VerifyTransactionResponse transactionResponse = await  SquadPay.verifyTransaction(
-    context, 
+final transactionResponse = await SquadPay.verifyTransaction(
     Environment.test,
-    "<-transaction reference here->",
-    ));   
+    "<-SECRET -KEY->",
+    "yVJ2KXwvtc" // transaction Ref
+);  
+
 ```
 
 
