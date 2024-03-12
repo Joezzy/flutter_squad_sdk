@@ -4,9 +4,9 @@ power of Squad Payment Gateway to your Android and iOS Applications.
 It is also suitable for developers using Firebase or Supabase for backend. 
 You can initiate payment and also checkout right from your Flutter app.
 iOS
+<img width="284" alt="Screenshot 2024-03-12 at 7 50 13 PM" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/01f8cc0c-482c-4799-aa16-88ec44ce8649">
+<img width="289" alt="Screenshot 2024-03-12 at 7 50 45 PM" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/c4e75e10-e66f-4d8c-8bd3-e50b044e6122">
 
-<img width="445" alt="ios_1" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/f8c2042f-0f7d-425d-a175-24d0ba80004e">
-<img width="433" alt="ios_2" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/d20f8e58-3cf6-4470-8793-c71035191a42">
 
 Android
 <img width="302" alt="Screenshot 2024-03-12 at 7 47 23 PM" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/da24933b-5ab0-405d-8e55-f55632e80ed6">
