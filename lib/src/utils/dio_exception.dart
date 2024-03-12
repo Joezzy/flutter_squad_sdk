@@ -44,7 +44,7 @@ class DioExceptions implements Exception {
         return '$error';
       case 403:
         return '$error';
-        // return 'Forbidden: $error';
+      // return 'Forbidden: $error';
       case 404:
         return error;
       case 500:
@@ -58,6 +58,4 @@ class DioExceptions implements Exception {
 
   @override
   String toString() => message;
-
-
 }

@@ -4,7 +4,7 @@ class DioExceptions implements Exception {
   late String message;
 
   DioExceptions.fromDioError(DioException dioError) {
-    print("dio-err:${dioError.type}");
+    // print("dio-err:${dioError.type}");
     switch (dioError.type) {
       case DioExceptionType.cancel:
         message = "Request to API server was cancelled";
@@ -45,7 +45,7 @@ class DioExceptions implements Exception {
         return '$error';
       case 403:
         return '$error';
-        // return 'Forbidden: $error';
+      // return 'Forbidden: $error';
       case 404:
         return error;
       case 500:
@@ -59,6 +59,4 @@ class DioExceptions implements Exception {
 
   @override
   String toString() => message;
-
-
 }

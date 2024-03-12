@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-class VerifyTransactionResponse {
-  VerifyTransactionResponse({
+class TransactionResponse {
+  TransactionResponse({
     required this.status,
     required this.success,
     required this.message,
@@ -12,10 +12,11 @@ class VerifyTransactionResponse {
   final bool? success;
   final String? message;
   final Data? data;
-  factory VerifyTransactionResponse.fromJson(String str) => VerifyTransactionResponse.fromMap(json.decode(str));
+  factory TransactionResponse.fromJson(String str) =>
+      TransactionResponse.fromMap(json.decode(str));
 
-  factory VerifyTransactionResponse.fromMap(Map<String, dynamic> json){
-    return VerifyTransactionResponse(
+  factory TransactionResponse.fromMap(Map<String, dynamic> json) {
+    return TransactionResponse(
       status: json["status"],
       success: json["success"],
       message: json["message"],
@@ -24,12 +25,11 @@ class VerifyTransactionResponse {
   }
 
   Map<String, dynamic> toJson() => {
-    "status": status,
-    "success": success,
-    "message": message,
-    "data": data?.toJson(),
-  };
-
+        "status": status,
+        "success": success,
+        "message": message,
+        "data": data?.toJson(),
+      };
 }
 
 class Data {
@@ -67,7 +67,7 @@ class Data {
   final double? fee;
   final int? merchantAmount;
 
-  factory Data.fromJson(Map<String, dynamic> json){
+  factory Data.fromJson(Map<String, dynamic> json) {
     return Data(
       transactionAmount: json["transaction_amount"],
       transactionRef: json["transaction_ref"],
@@ -82,42 +82,37 @@ class Data {
       merchantEmail: json["merchant_email"],
       meta: json["meta"] == null ? null : Meta.fromJson(json["meta"]),
       cardType: json["card_type"],
-      fee:json["fee"]==null?0.0: double.parse(json["fee"].toString()),
+      fee: json["fee"] == null ? 0.0 : double.parse(json["fee"].toString()),
       merchantAmount: json["merchant_amount"],
     );
   }
 
   Map<String, dynamic> toJson() => {
-    "transaction_amount": transactionAmount,
-    "transaction_ref": transactionRef,
-    "email": email,
-    "transaction_status": transactionStatus,
-    "transaction_currency_id": transactionCurrencyId,
-    "created_at": createdAt?.toIso8601String(),
-    "transaction_type": transactionType,
-    "merchant_name": merchantName,
-    "merchant_business_name": merchantBusinessName,
-    "gateway_transaction_ref": gatewayTransactionRef,
-    "merchant_email": merchantEmail,
-    "meta": meta?.toJson(),
-    "card_type": cardType,
-    "fee": fee,
-    "merchant_amount": merchantAmount,
-  };
-
+        "transaction_amount": transactionAmount,
+        "transaction_ref": transactionRef,
+        "email": email,
+        "transaction_status": transactionStatus,
+        "transaction_currency_id": transactionCurrencyId,
+        "created_at": createdAt?.toIso8601String(),
+        "transaction_type": transactionType,
+        "merchant_name": merchantName,
+        "merchant_business_name": merchantBusinessName,
+        "gateway_transaction_ref": gatewayTransactionRef,
+        "merchant_email": merchantEmail,
+        "meta": meta?.toJson(),
+        "card_type": cardType,
+        "fee": fee,
+        "merchant_amount": merchantAmount,
+      };
 }
 
 class Meta {
   Meta({required this.json});
-  final Map<String,dynamic> json;
+  final Map<String, dynamic> json;
 
-  factory Meta.fromJson(Map<String, dynamic> json){
-    return Meta(
-        json: json
-    );
+  factory Meta.fromJson(Map<String, dynamic> json) {
+    return Meta(json: json);
   }
 
-  Map<String, dynamic> toJson() => {
-  };
-
+  Map<String, dynamic> toJson() => {};
 }

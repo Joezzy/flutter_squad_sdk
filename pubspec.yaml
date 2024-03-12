@@ -1,7 +1,7 @@
 name: flutter_squad_sdk
 description: "A Flutter package for that gives you the ability to integrate the 
 power of Squad Payment Gateway to your Android and iOS Applications."
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/Joezzy/flutter_squad_sdk
 
 environment:

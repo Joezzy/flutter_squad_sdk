@@ -2,10 +2,10 @@ import 'dart:convert';
 
 class InitiateResponse {
   InitiateResponse({
-     this.status,
-     this.success,
-     this.message,
-     this.data,
+    this.status,
+    this.success,
+    this.message,
+    this.data,
   });
 
   final int? status;
@@ -13,9 +13,10 @@ class InitiateResponse {
   final String? message;
   final Detail? data;
 
-  factory InitiateResponse.fromJson(String str) => InitiateResponse.fromMap(json.decode(str));
+  factory InitiateResponse.fromJson(String str) =>
+      InitiateResponse.fromMap(json.decode(str));
 
-  factory InitiateResponse.fromMap(Map<String, dynamic> json){
+  factory InitiateResponse.fromMap(Map<String, dynamic> json) {
     return InitiateResponse(
       status: json["status"],
       success: json["success"],
@@ -25,26 +26,25 @@ class InitiateResponse {
   }
 
   Map<String, dynamic> toJson() => {
-    "status": status,
-    "success": success,
-    "message": message,
-    "data": data?.toJson(),
-  };
-
+        "status": status,
+        "success": success,
+        "message": message,
+        "data": data?.toJson(),
+      };
 }
 
 class Detail {
   Detail({
-     this.merchantInfo,
-     this.currency,
-     this.recurring,
-     this.isRecurring,
-     this.callbackUrl,
-     this.transactionRef,
-     this.transactionAmount,
-     this.authorizedChannels,
-     this.checkoutUrl,
-     this.allowRecurring,
+    this.merchantInfo,
+    this.currency,
+    this.recurring,
+    this.isRecurring,
+    this.callbackUrl,
+    this.transactionRef,
+    this.transactionAmount,
+    this.authorizedChannels,
+    this.checkoutUrl,
+    this.allowRecurring,
   });
 
   final MerchantInfo? merchantInfo;
@@ -58,46 +58,51 @@ class Detail {
   final String? checkoutUrl;
   final bool? allowRecurring;
 
-  factory Detail.fromJson(Map<String, dynamic> json){
+  factory Detail.fromJson(Map<String, dynamic> json) {
     return Detail(
-      merchantInfo: json["merchant_info"] == null ? null : MerchantInfo.fromJson(json["merchant_info"]),
+      merchantInfo: json["merchant_info"] == null
+          ? null
+          : MerchantInfo.fromJson(json["merchant_info"]),
       currency: json["currency"],
-      recurring: json["recurring"] == null ? null : Recurring.fromJson(json["recurring"]),
+      recurring: json["recurring"] == null
+          ? null
+          : Recurring.fromJson(json["recurring"]),
       isRecurring: json["is_recurring"],
       callbackUrl: json["callback_url"],
       transactionRef: json["transaction_ref"],
       transactionAmount: json["transaction_amount"],
-      authorizedChannels: json["authorized_channels"] == null ? [] : List<String>.from(json["authorized_channels"]!.map((x) => x)),
+      authorizedChannels: json["authorized_channels"] == null
+          ? []
+          : List<String>.from(json["authorized_channels"]!.map((x) => x)),
       checkoutUrl: json["checkout_url"],
       allowRecurring: json["allow_recurring"],
     );
   }
 
   Map<String, dynamic> toJson() => {
-    "merchant_info": merchantInfo?.toJson(),
-    "currency": currency,
-    "recurring": recurring?.toJson(),
-    "is_recurring": isRecurring,
-    "callback_url": callbackUrl,
-    "transaction_ref": transactionRef,
-    "transaction_amount": transactionAmount,
-    "authorized_channels": authorizedChannels!.map((x) => x).toList(),
-    "checkout_url": checkoutUrl,
-    "allow_recurring": allowRecurring,
-  };
-
+        "merchant_info": merchantInfo?.toJson(),
+        "currency": currency,
+        "recurring": recurring?.toJson(),
+        "is_recurring": isRecurring,
+        "callback_url": callbackUrl,
+        "transaction_ref": transactionRef,
+        "transaction_amount": transactionAmount,
+        "authorized_channels": authorizedChannels!.map((x) => x).toList(),
+        "checkout_url": checkoutUrl,
+        "allow_recurring": allowRecurring,
+      };
 }
 
 class MerchantInfo {
   MerchantInfo({
-     this.merchantName,
-     this.merchantId,
+    this.merchantName,
+    this.merchantId,
   });
 
   final String? merchantName;
   final String? merchantId;
 
-  factory MerchantInfo.fromJson(Map<String, dynamic> json){
+  factory MerchantInfo.fromJson(Map<String, dynamic> json) {
     return MerchantInfo(
       merchantName: json["merchant_name"],
       merchantId: json["merchant_id"],
@@ -105,27 +110,25 @@ class MerchantInfo {
   }
 
   Map<String, dynamic> toJson() => {
-    "merchant_name": merchantName,
-    "merchant_id": merchantId,
-  };
-
+        "merchant_name": merchantName,
+        "merchant_id": merchantId,
+      };
 }
 
 class Recurring {
   Recurring({
-     this.type,
+    this.type,
   });
 
   final int? type;
 
-  factory Recurring.fromJson(Map<String, dynamic> json){
+  factory Recurring.fromJson(Map<String, dynamic> json) {
     return Recurring(
       type: json["type"],
     );
   }
 
   Map<String, dynamic> toJson() => {
-    "type": type,
-  };
-
+        "type": type,
+      };
 }

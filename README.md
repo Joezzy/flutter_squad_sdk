@@ -53,7 +53,7 @@ To checkout after initializing payment from another source (i.e your backend ser
 ```dart
 //Checkout only
     SquadPay.checkOut(
-context,
+      context,
     '<-Enter your checkout URL here->',
     '<-Enter your call-back URL here->'
     );    
