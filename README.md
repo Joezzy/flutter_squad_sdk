@@ -9,8 +9,9 @@ iOS
 <img width="433" alt="ios_2" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/d20f8e58-3cf6-4470-8793-c71035191a42">
 
 Android
-![android_1](https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/ffe1f7ae-5ca3-4476-97af-a943522d8b01)
-![android_2](https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/339c08a9-bb53-468e-a024-b2e955512a10)
+<img width="302" alt="Screenshot 2024-03-12 at 7 47 23 PM" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/da24933b-5ab0-405d-8e55-f55632e80ed6">
+<img width="299" alt="Screenshot 2024-03-12 at 7 46 45 PM" src="https://github.com/Joezzy/flutter_squad_sdk/assets/48259356/67707f1b-976c-4c81-af50-89c5263a2631">
+
 
 
 ## Features
